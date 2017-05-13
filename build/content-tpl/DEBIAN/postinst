@@ -22,9 +22,6 @@ if [[ $1 == "configure" ]]; then
 		ln -s /usr/local/share/kodi /usr/local/share/xbmc
 	fi
 
-        test -e /home/xbian/.kodi/userdata/sources.xml && \
-	    sed --follow-symlinks -i 's%http://mirrors.superrepo.org/addons/frodo/.xml/repositories/addons.xml%http://mirrors.superrepo.org/Gotham/All/%' /home/xbian/.kodi/userdata/sources.xml
-
         mkdir -p /home/xbian/run_on_reboot
         
 cat <<\EOF > /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh
